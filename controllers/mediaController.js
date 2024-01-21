@@ -56,6 +56,7 @@ exports.deletemedia = async (req, res) => {
     if(data.videos){
       let newName = data.videos[0].slice(15)
       fs.unlinkSync("public/videos/"+newName)
+      // console.log(newName,"is deleted successfully");
     }
     await Media.deleteOne({_id : req.params._id})
   }

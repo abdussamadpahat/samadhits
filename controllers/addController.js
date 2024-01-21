@@ -51,7 +51,7 @@ async function getAdd(req, res) {
             res.send({ result: "Done", message: "images getted successfully", items: data.length, data: data })
         }
     } catch (error) {
-        console.log(error);
+        // console.log(error);
         res.status(500).send({ result: "Fail", message: "Internel Server Error..." })
     }
 }
