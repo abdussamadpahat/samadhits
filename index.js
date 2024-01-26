@@ -22,5 +22,5 @@ app.use(express.static(path.join(__dirname, "build")));            // import dur
 app.use("/api", router);
 app.use('*', express.static(path.join(__dirname, "build")));   // import during connecting with frontend.
 
-const port = process.env.PORT || 3000
-app.listen(port, () => console.log(`Server is running...`))
+const port = process.env.PORT || 8008
+app.listen(port, () => console.log(`Server is running at PORT ${port}`))
